@@ -1,0 +1,15 @@
+# raw data is large — never commit it
+data/raw/
+data/features/*.parquet
+*.mp4
+*.wav
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# reports output (keep the folder, ignore heavy html if you prefer)
+reports/figures/*.png
