@@ -1,0 +1,13 @@
+pandas
+numpy<2
+pyarrow
+librosa
+opensmile
+py-feat
+opencv-python
+ydata-profiling
+pycaret
+matplotlib
+seaborn
+moviepy
+tqdm
