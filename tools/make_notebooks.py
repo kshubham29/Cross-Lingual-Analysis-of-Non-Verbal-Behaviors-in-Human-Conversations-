@@ -60,9 +60,20 @@ PAST_MEAN = '''def past_mean(X, speakers, k):
     return out'''
 
 
+DATASET = """### Dataset
+**NoXi** (NOvice eXpert Interaction) - multimodal recordings of expert-novice conversations with continuous engagement labels.
+- Dataset page: https://multimediate-challenge.org/datasets/Dataset_NoXi/
+- Paper: A. Cafaro et al., "The NoXi Database: Multimodal Recordings of Mediated Novice-Expert Interactions", ACM ICMI 2017, https://doi.org/10.1145/3136755.3136780
+- Used here: 9 conversations (English 027, 028, 030; French 001, 013, 021; German 070, 072, 077) from the NoXi train set:
+  eGeMAPS voice features, OpenFace 2.0 face features, engagement labels (25 per second) and the pretrained-Transformer embeddings shipped with the corpus.
+- Licence: NoXi is available for research under an End-User Licence Agreement (signed by the supervisor). The data is **not included** here and must not be shared;
+  request access on the dataset page and place the downloaded zips as described in `01_extract_data`."""
+
+
 def build(name, title, cells):
     nb = nbf.v4.new_notebook()
     nb.cells.append(nbf.v4.new_markdown_cell(title))
+    nb.cells.append(nbf.v4.new_markdown_cell(DATASET))
     for kind, text in cells:
         nb.cells.append(nbf.v4.new_markdown_cell(text) if kind == "md" else nbf.v4.new_code_cell(text))
     nb.metadata["kernelspec"] = {"name": "python3", "display_name": "Python 3", "language": "python"}
