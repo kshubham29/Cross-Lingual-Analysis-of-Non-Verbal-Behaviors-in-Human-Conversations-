@@ -42,3 +42,6 @@ Project_Status_Update.*
 
 # submission folder for the teacher (copies of deliverables)
 Submission_*/
+
+# old drafts and replaced files (kept locally, not on GitHub)
+old_versions/
