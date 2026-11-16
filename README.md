@@ -91,7 +91,7 @@ All result tables are in `reports/` (CSV) and the full write-up is in `Project_R
 | `Project_Report_Final.pdf` | Full project report |
 | `Research_Paper_Draft_v4.pdf` | Research paper (IEEE format) |
 | `Results_Summary_9_Conversations.pdf` | All results in one document |
-| `Literature_Review.xlsx` | Literature review (26 papers) |
+| `Literature_Review.xlsx` | Literature review (40 papers) |
 | `Dataset_Description.docx`, `Laboratory_Manual.docx` | Dataset description and laboratory manual |
 | `Project_Presentation.pptx`, `Research_Poster.pptx` | Presentation and poster |
 
