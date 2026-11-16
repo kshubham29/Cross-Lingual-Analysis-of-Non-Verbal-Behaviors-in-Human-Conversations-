@@ -62,8 +62,10 @@ PAST_MEAN = '''def past_mean(X, speakers, k):
 
 DATASET = """### Dataset
 **NoXi** (NOvice eXpert Interaction) - multimodal recordings of expert-novice conversations with continuous engagement labels.
-- Dataset page: https://multimediate-challenge.org/datasets/Dataset_NoXi/
-- Paper: A. Cafaro et al., "The NoXi Database: Multimodal Recordings of Mediated Novice-Expert Interactions", ACM ICMI 2017, https://doi.org/10.1145/3136755.3136780
+- Dataset page (MultiMediate): https://multimediate.perceptualui.org/datasets/Dataset_NoXi/ (if it is offline, use the links below)
+- Paper: A. Cafaro et al., "The NoXi Database: Multimodal Recordings of Mediated Novice-Expert Interactions", ACM ICMI 2017: https://eprints.nottingham.ac.uk/45827 (DOI https://doi.org/10.1145/3136755.3136780)
+- Extension NoXi+J (2024): https://arxiv.org/abs/2409.13726
+- Data access: University of Augsburg, Human-Centered AI lab - noxi@hcai.eu
 - Used here: 9 conversations (English 027, 028, 030; French 001, 013, 021; German 070, 072, 077) from the NoXi train set:
   eGeMAPS voice features, OpenFace 2.0 face features, engagement labels (25 per second) and the pretrained-Transformer embeddings shipped with the corpus.
 - Licence: NoXi is available for research under an End-User Licence Agreement (signed by the supervisor). The data is **not included** here and must not be shared;

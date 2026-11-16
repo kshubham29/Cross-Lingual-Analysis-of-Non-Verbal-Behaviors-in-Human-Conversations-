@@ -31,8 +31,9 @@ Predicting how **engaged** a person is in a conversation from **non-verbal behav
 (voice tone + facial behaviour, never the words), and testing whether a model trained
 on one language still works on another.
 
-**Dataset:** [NoXi](https://multimediate-challenge.org/datasets/Dataset_NoXi/) - expert-novice
+**Dataset:** [NoXi](https://multimediate.perceptualui.org/datasets/Dataset_NoXi/) - expert-novice
 conversations in English, French and German (licensed, not included in this repository).
+Paper: [Cafaro et al., ICMI 2017](https://eprints.nottingham.ac.uk/45827) - extension: [NoXi+J (arXiv)](https://arxiv.org/abs/2409.13726) - data access: noxi@hcai.eu (if the dataset page is offline).
 
 ---
 
