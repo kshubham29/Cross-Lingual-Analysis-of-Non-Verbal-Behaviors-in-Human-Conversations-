@@ -45,3 +45,8 @@ Submission_*/
 
 # old drafts and replaced files (kept locally, not on GitHub)
 old_versions/
+
+# editable copies kept locally; GitHub has the PDF versions
+Project_Report_Final.docx
+Research_Paper_Draft_v4.docx
+Results_Summary_9_Conversations.xlsx
