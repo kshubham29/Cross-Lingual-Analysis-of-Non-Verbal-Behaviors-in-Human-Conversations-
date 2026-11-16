@@ -19,6 +19,7 @@ import pandas as pd
 
 NOXI_ROOT = os.path.join("data", "noxi")
 OUT = os.path.join("data", "features", "noxi_engagement.parquet")
+OUT_SEQ = os.path.join("data", "features", "noxi_sequences.npy")   # (windows, 25, 802) for the CNN
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 
 WINDOW = 25   # 25 frames = 1 second
@@ -63,6 +64,7 @@ def read_language(folder):
 
 def build():
     rows = []
+    seqs = []   # the un-averaged 25-frame windows, in the same order as rows
 
     # -----------------------------------------------------------------------
     # BLOCK 5 - FIND THE CONVERSATIONS
@@ -121,6 +123,11 @@ def build():
                 # tag each row so we know which language/session/person it came from
                 feat.update(engagement=eng, language=lang, session=sess, role=role)
                 rows.append(feat)
+
+                # keep the raw 25 frames too (voice + face side by side) for the
+                # sequence models
+                frames = ege[s] if face is None else np.concatenate([ege[s], face[s]], axis=1)
+                seqs.append(np.nan_to_num(frames, nan=0.0).astype(np.float32))
         print(f"  {sess} ({lang}) done")
 
     # -----------------------------------------------------------------------
@@ -131,6 +138,10 @@ def build():
     df = pd.DataFrame(rows)
     df.to_parquet(OUT, index=False)
     print(f"\nSaved {len(df)} windows x {df.shape[1]} cols -> {OUT}")
+
+    seq = np.stack(seqs)
+    np.save(OUT_SEQ, seq)
+    print(f"Saved sequences {seq.shape} -> {OUT_SEQ}")
     print("Per language:\n", df.groupby("language").agg(
         windows=("engagement", "size"), mean_engagement=("engagement", "mean")))
 
