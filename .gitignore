@@ -53,3 +53,9 @@ Results_Summary_9_Conversations.xlsx
 
 # document-building helper scripts (kept locally, not needed to run the project)
 tools/
+
+# not needed on GitHub (kept locally)
+reports/screenshots/
+reports/figures/demo_app.jpg
+reports/results_summary.json
+src/show_features.py
