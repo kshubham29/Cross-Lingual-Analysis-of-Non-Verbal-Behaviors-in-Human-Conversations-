@@ -50,3 +50,6 @@ old_versions/
 Project_Report_Final.docx
 Research_Paper_Draft_v4.docx
 Results_Summary_9_Conversations.xlsx
+
+# document-building helper scripts (kept locally, not needed to run the project)
+tools/
